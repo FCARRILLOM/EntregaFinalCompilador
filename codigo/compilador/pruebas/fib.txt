@@ -1,0 +1,21 @@
+programa fibonacci;
+variables
+    int : x, i, f[50];
+
+principal() {
+	escribe("Cantidad de elementos de la serie fibonacci:" );
+	lee(x);
+
+	f[0] = 0;
+	f[1] = 1;
+
+	desde i = 2 hasta x + 1 hacer
+	{
+		f[i] = f[i - 1] + f[i - 2];
+	}
+
+	desde i = 0 hasta x hacer
+	{
+		escribe(f[i]);
+	}
+}

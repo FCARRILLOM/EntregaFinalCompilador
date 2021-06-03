@@ -1,0 +1,28 @@
+programa functionret;
+variables
+	int : a[15], b[3, 3], tam;
+
+funcion int uno();
+variables
+    int : cont;
+{
+    desde i = 0 hasta tam hacer {
+        desde j = 0 hasta tam hacer {
+            si (i == 0 | j == 0) entonces {
+                b[i, j] = 1;
+            } sino {
+                b[i, j] = b[i - 1, j - 1] + 1;
+            }
+        }
+    }
+
+    si (b[0, 0] <> 1) entonces {
+        si (b[1, 1] <> 2) entonces {
+            regresa (1);
+        }
+    }
+}
+
+principal() {
+    escribe(uno());
+}

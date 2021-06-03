@@ -1,0 +1,15 @@
+programa factorial;
+variables
+    int : x, i, res;
+
+principal() {
+	escribe("Numero factorial a calcular:");
+	lee(x);
+	res = 1;
+
+	desde i = 2 hasta (x+1) hacer{
+		res = res * i;
+	}
+
+	escribe("Solución: ", res);
+}

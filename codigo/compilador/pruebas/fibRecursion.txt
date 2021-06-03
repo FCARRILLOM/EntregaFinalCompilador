@@ -1,0 +1,27 @@
+programa fibonacci;
+variables
+    int : x;
+
+funcion int fibR(int : x);
+{
+	si (x <= 1) entonces {
+		regresa(x);
+	} sino {
+        regresa(fibR(x - 1) + fibR(x - 2));
+	}
+	%%escribe("DESPUES");
+}
+
+funcion void imprimeSequenciaFib(int : n);
+{
+	escribe(0);
+	desde a = 1 hasta n hacer {
+		escribe(fibR(a));
+	}
+}
+
+principal() {
+	escribe("Cantidad de elementos de la serie fibonacci:" );
+	lee(x);
+	imprimeSequenciaFib(x);
+}

@@ -1,0 +1,45 @@
+programa objetos;
+
+Clase carro;
+{
+    atributos
+        int : numLlantas, tipo;
+        float: vel;
+
+    metodos
+        funcion float velocidadMaxima();
+        variables
+            int : x, y;
+        {
+            x = 2;
+            y = 3;
+            regresa(x * y * 1.0);
+        }
+
+        funcion void llantas();
+        variables
+            int : x, y;
+        {
+            x = 4;
+            escribe("llantas", x);
+        }
+};
+
+funcion void f1();
+variables
+    carro : bmw;
+{
+    bmw.numLlantas = 4;
+    bmw.vel = 100.0;
+	escribe("Num. llantas: ", bmw.numLlantas);
+    escribe("Vel. bmw: ", bmw.vel);
+}
+
+variables
+    carro : audi;
+
+principal() {
+	f1();
+    escribe(audi->velocidadMaxima());
+    audi->llantas();
+}

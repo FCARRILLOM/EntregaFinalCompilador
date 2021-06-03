@@ -1,0 +1,21 @@
+programa simple;
+variables
+	int : a, b;
+    float : i, j;
+    char: letra_a, letra_b;
+
+funcion void demo();
+variables
+    int : x, y;
+{
+    x = 1;
+    y = 2;
+	escribe("demo=", x+y);
+}
+
+
+principal() {
+    lee(letra_a, letra_b);
+    
+    escribe(letra_a, letra_b);
+}

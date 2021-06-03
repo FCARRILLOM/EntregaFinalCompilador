@@ -1,0 +1,25 @@
+programa simpleArr;
+variables
+	float: a[3];
+    char: abc[3];
+    int: tam;
+
+principal() {
+    tam = 3;
+    
+    desde i = 0 hasta tam hacer {
+        a[i] = i * 2.0;
+    }
+
+    desde i = 0 hasta tam hacer {
+        escribe(a[i]);
+    }
+
+    abc[0] = 'a';
+    abc[1] = 'b';
+    abc[2] = 'c';
+
+    desde i = 0 hasta tam hacer {
+        escribe(abc[i]);
+    }
+}

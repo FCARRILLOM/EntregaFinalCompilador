@@ -1,0 +1,70 @@
+programa sort_find;
+variables
+	int : a[10], tam_a, valor_a;
+    int : b[10], tam_b;
+
+funcion int findInt(int : x);
+variables
+    int : idx;
+{
+    idx = -1;
+
+    desde i = 0 hasta tam_a hacer {
+        si (a[i] == x) entonces {
+            idx = i;
+        }
+    }
+
+    regresa(idx);
+}
+
+funcion void bubbleSort();
+variables
+    int : temp;
+{
+    desde i = 0 hasta (tam_b - 1) hacer {
+        desde j = 0 hasta (tam_b - i - 1) hacer {
+            si (b[j] > b[j+1]) entonces {
+                temp = b[j];
+                b[j] = b[j + 1];
+                b[j + 1] = temp;
+            }
+        }
+    }
+}
+
+principal() {
+
+    %% FIND ---------
+    tam_a = 10;
+    desde i = 0 hasta tam_a hacer {
+        a[i] = i+1;
+    }
+
+    escribe("Ingresa el número deseas buscar: ");
+    lee(valor_a);
+
+    si (findInt(valor_a) <> -1) entonces {
+        escribe("Se encontro en el indice: ", findInt(valor_a));
+    } sino {
+        escribe("No se encontro en el arreglo 'a'");
+    }
+
+    %% SORT ---------
+    tam_b = 10;
+    desde j = 0 hasta tam_b hacer {
+        b[j] = tam_b - j;
+    }
+    escribe("ARREGLO b UNSORTED:");
+    desde i = 0 hasta tam_b hacer {
+        escribe(b[i]);
+    }
+
+    bubbleSort();
+
+    escribe("ARREGLO b SORTED:");
+    desde i = 0 hasta tam_b hacer {
+        escribe(b[i]);
+    }
+    
+}

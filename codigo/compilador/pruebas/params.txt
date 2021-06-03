@@ -1,0 +1,21 @@
+programa params;
+
+funcion int uno(int : a, float : b);
+{
+	escribe("b: ", b);
+	regresa(a);
+}
+
+funcion int counter(int : a, int: b);
+{
+    escribe(a, b, "-----");
+	si (a >= b) entonces {
+		regresa(a);
+	} sino {
+        regresa(counter(uno(a, b*1.0) + uno(a, b *1.0), b - 1));
+	}
+}
+
+principal() {
+    escribe(counter(2, 20));
+}

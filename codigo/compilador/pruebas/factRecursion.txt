@@ -1,0 +1,19 @@
+programa factorial;
+variables
+	int : x, res;
+
+funcion int factorialR(int: n);
+{
+	si (n == 0) entonces {
+		regresa(1);
+	} sino {
+		regresa(n * factorialR(n - 1));
+	}
+}
+
+principal() {
+	escribe("Ingrese factorial a calcular: ");
+	lee(x);
+	res = factorialR(x);
+	escribe("Solucion: ", res);
+}

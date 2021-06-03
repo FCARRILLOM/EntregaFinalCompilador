@@ -1,0 +1,39 @@
+programa rec;
+variables
+	int : a, b;
+
+funcion void demo();
+variables
+    int : x;
+{
+    x = a;
+    si (x < 10) entonces {
+        escribe(x);
+        a = a + 1;
+        demo();
+    } sino {
+        escribe("Fin de demo");
+    }
+}
+
+funcion int demo_int();
+variables
+    int : x;
+{
+    si ( b >= 10) entonces {
+        regresa(0);
+    } sino {
+        b = b + 1;
+        x = demo_int() + 1;
+        escribe(x);
+        regresa(x);
+    }
+}
+
+principal() {
+	a = 0;
+    b = 0;
+
+    %%demo();
+    escribe(demo_int());
+}

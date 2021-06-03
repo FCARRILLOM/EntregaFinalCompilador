@@ -1,0 +1,31 @@
+programa prueba_while;
+variables
+	int : i, j;
+
+funcion void contador();
+{
+	mientras (i < 10) hacer {
+		escribe(i);
+		i = i + 1;
+	}
+}
+
+funcion int contador2();
+variables
+	int : x;
+{
+	x = 10;
+	escribe("valores de a:");
+	desde a = 1 hasta 10 hacer {
+		x = x + 1;
+	}
+
+	regresa(x);
+}
+
+principal() {
+	i = 0;
+	contador();
+	escribe("i final:", i);
+	escribe(contador2());
+}

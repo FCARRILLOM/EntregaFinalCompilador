@@ -1,0 +1,20 @@
+programa ifs;
+variables
+	int : i, j;
+
+funcion void uno(int : x);
+{
+	si (x > j) entonces {
+		escribe("x mayor a j");
+	} sino {
+		escribe("x no es mayor a j");
+	}
+}
+
+principal() {
+	j = 3;
+	escribe("j =", j, "x = ");
+	lee(i);
+	uno(i);
+	escribe("FIN");
+}

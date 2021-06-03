@@ -1,0 +1,51 @@
+programa multMat;
+variables
+	int : a[3, 3], b[3, 3], c[3, 3], tam;
+
+funcion void dotProduct();
+{
+    desde i = 0 hasta tam hacer {
+        desde j = 0 hasta tam hacer {
+            b[i, j] = 2;
+            c[i, j] = 2;
+        }
+    }
+
+    desde i = 0 hasta tam hacer {
+        desde j = 0 hasta tam hacer {
+            a[i, j] = b[i, j] * c[i, j];
+        }
+    }
+}
+
+funcion void matrixMult();
+{
+    desde i = 0 hasta tam hacer {
+        desde j = 0 hasta tam hacer {
+            b[i, j] = i;
+            c[i, j] = j;
+        }
+    }
+
+    desde i = 0 hasta tam hacer {
+        desde j = 0 hasta tam hacer {
+            desde k = 0 hasta tam hacer {
+                a[i, j] =  a[i, j] + b[i, k] * c[k, j];
+            }
+        }
+    }
+}
+
+principal() {
+    tam = 3;
+    %%dotProduct();
+    matrixMult();
+
+    desde i = 0 hasta tam hacer {
+        desde j = 0 hasta tam hacer {
+            escribe(a[i, j]);
+        }
+        escribe("------");
+    }
+        
+}
